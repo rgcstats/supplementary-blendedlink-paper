@@ -1,0 +1,198 @@
+% sage_latex_guidelines.tex V1.01, 11 June 2015
+\documentclass[12pt,a4paper]{article}
+\usepackage[margin=2cm]{geometry}
+\usepackage{booktabs}
+
+\usepackage{moreverb,url}
+
+\usepackage[colorlinks,bookmarksopen,bookmarksnumbered,citecolor=red,urlcolor=red]{hyperref}
+%\def\journalname{Statistical Methods in Medical Research}
+
+\newcommand\BibTeX{{\rmfamily B\kern-.05em \textsc{i\kern-.025em b}\kern-.08em
+T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
+
+%\def\volumeyear{2016}
+\date{}
+
+ % RGC packages and commands
+\usepackage{float}
+\renewcommand{\vec}[1]{\boldsymbol{#1}}
+\usepackage{enumerate}
+
+
+
+\begin{document}
+
+
+\title{Supplementary Tables for Clark and Barr (2017):  \\  
+Standard Deviations of Relative Risk Estimators in Simulation Study when $n=1000$ }
+
+
+\maketitle
+
+
+
+{\bf \it Note that there are some very large root mean squared errors in some tables, for the logistic and other models, when the true relative risk is large. This is because the parameter estimates are effectively infinite in some samples. This can occur in binary regression when all of the $Y=1$ instances occur at higher values of a covariate than all of the $Y=0$ instances (Hosmer et. al 2013, section 4.4). This typically occurs only when the sample size is small and the covariates have strong predictive power.}
+
+
+\begin{table}[H] 
+\small\sf\centering 
+\caption{Standard deviations (SDs) of relative risk (RR) estimators for $x_1=1$ vs $x_1=-1$ when $\mbox{logit}(P[Y=1])=\alpha+\beta_1 x_1 + \beta_2 x_2$. Sample size is 1000. $x_1 \sim $binary (values $\pm 1$ with equal probability), $x_2 \sim N(0,1)$. {\it Median prob} refers to the probability that $Y=1$ when both covariates are at their median value. {\it Logit, log, poisson and log-logit} refer to binary regression with logit link (logistic regression) and log link, Poisson regression with log link and binary regression with blended log-logit link, respectively. {\it Prob.reject} is the simulation probability of rejecting the null that the cutover probability is $0.8$ in the blended log-logit model.} 
+\begin{tabular}{llrrrrr} 
+\toprule 
+median & true RR & \multicolumn{4}{c}{bias of estimated RR} & prob.reject \\ 
+prob. & & logit & log & poisson & log-logit  & \\ \midrule 
+0.3 & 1.200 & 0.116 & 0.113 & 0.113 & 0.112 &  0.1 \\  
+0.3 & 1.500 & 0.147 & 0.142 & 0.143 & 0.142 &  0.4 \\  
+0.3 & 3.000 & 0.343 & 0.328 & 0.328 & 0.328 &  5.2 \\  
+0.5 & 1.200 & 0.078 & 0.073 & 0.075 & 0.074 &  7.9 \\  
+0.5 & 1.500 & 0.101 & 0.095 & 0.096 & 0.096 & 20.8 \\  
+0.5 & 3.000 & 0.254 & 0.236 & 0.236 & 0.239 & 56.5 \\  
+\bottomrule 
+\end{tabular} 
+\end{table} 
+\begin{table}[H] 
+\small\sf\centering 
+\caption{Standard deviations (SDs) of relative risk (RR) estimators for $x_1=0.5$ vs $x_1=-0.5$ when $\mbox{logit}(P[Y=1])=\alpha+\beta_1 x_1 + \beta_2 x_2$. Sample size is 1000. $x_1 \sim $$N(0,1)$, $x_2 \sim N(0,1)$. {\it Median prob} refers to the probability that $Y=1$ when both covariates are at their median value. {\it Logit, log, poisson and log-logit} refer to binary regression with logit link (logistic regression) and log link, Poisson regression with log link and binary regression with blended log-logit link, respectively. {\it Prob.reject} is the simulation probability of rejecting the null that the cutover probability is $0.8$ in the blended log-logit model.} 
+\begin{tabular}{llrrrrr} 
+\toprule 
+median & true RR & \multicolumn{4}{c}{bias of estimated RR} & prob.reject \\ 
+prob. & & logit & log & poisson & log-logit  & \\ \midrule 
+0.3 & 1.200 & 0.061 & 0.050 & 0.057 & 0.056 &  0.2 \\  
+0.3 & 1.500 & 0.086 & 0.056 & 0.065 & 0.063 & 24.8 \\  
+0.3 & 3.000 & 0.281 & 0.062 & 0.080 & 0.132 & 97.1 \\  
+0.5 & 1.200 & 0.042 & 0.029 & 0.037 & 0.036 & 24.7 \\  
+0.5 & 1.500 & 0.063 & 0.035 & 0.042 & 0.050 & 82.1 \\  
+0.5 & 3.000 & 0.270 & 0.036 & 0.061 & 0.190 & 99.8 \\  
+\bottomrule 
+\end{tabular} 
+\end{table} 
+\begin{table}[H] 
+\small\sf\centering 
+\caption{Standard deviations (SDs) of relative risk (RR) estimators for $x_1=2$ vs $x_1=1$ when $\mbox{logit}(P[Y=1])=\alpha+\beta_1 x_1 + \beta_2 x_2$. Sample size is 1000. $x_1 \sim $$N(0,1)$, $x_2 \sim N(0,1)$. {\it Median prob} refers to the probability that $Y=1$ when both covariates are at their median value. {\it Logit, log, poisson and log-logit} refer to binary regression with logit link (logistic regression) and log link, Poisson regression with log link and binary regression with blended log-logit link, respectively. {\it Prob.reject} is the simulation probability of rejecting the null that the cutover probability is $0.8$ in the blended log-logit model.} 
+\begin{tabular}{llrrrrr} 
+\toprule 
+median & true RR & \multicolumn{4}{c}{bias of estimated RR} & prob.reject \\ 
+prob. & & logit & log & poisson & log-logit  & \\ \midrule 
+0.3 & 1.173 & 0.045 & 0.050 & 0.057 & 0.056 &  0.2 \\  
+0.3 & 1.332 & 0.035 & 0.056 & 0.065 & 0.063 & 24.8 \\  
+0.3 & 1.346 & 0.029 & 0.062 & 0.080 & 0.069 & 97.1 \\  
+0.5 & 1.098 & 0.014 & 0.036 & 0.061 & 0.020 & 99.8 \\  
+0.5 & 1.143 & 0.020 & 0.029 & 0.037 & 0.036 & 24.7 \\  
+0.5 & 1.206 & 0.013 & 0.035 & 0.042 & 0.026 & 82.1 \\  
+\bottomrule 
+\end{tabular} 
+\end{table} 
+\begin{table}[H] 
+\small\sf\centering 
+\caption{Standard deviations (SDs) of relative risk (RR) estimators for $x_1=-1$ vs $x_1=-2$ when $\mbox{logit}(P[Y=1])=\alpha+\beta_1 x_1 + \beta_2 x_2$. Sample size is 1000. $x_1 \sim $$N(0,1)$, $x_2 \sim N(0,1)$. {\it Median prob} refers to the probability that $Y=1$ when both covariates are at their median value. {\it Logit, log, poisson and log-logit} refer to binary regression with logit link (logistic regression) and log link, Poisson regression with log link and binary regression with blended log-logit link, respectively. {\it Prob.reject} is the simulation probability of rejecting the null that the cutover probability is $0.8$ in the blended log-logit model.} 
+\begin{tabular}{llrrrrr} 
+\toprule 
+median & true RR & \multicolumn{4}{c}{bias of estimated RR} & prob.reject \\ 
+prob. & & logit & log & poisson & log-logit  & \\ \midrule 
+0.3 & 1.224 & 0.075 & 0.050 & 0.057 & 0.056 &  0.2 \\  
+0.3 & 1.634 & 0.125 & 0.056 & 0.065 & 0.063 & 24.8 \\  
+0.3 & 4.583 & 0.571 & 0.062 & 0.080 & 0.132 & 97.1 \\  
+0.5 & 1.260 & 0.066 & 0.029 & 0.037 & 0.036 & 24.7 \\  
+0.5 & 1.865 & 0.147 & 0.035 & 0.042 & 0.050 & 82.1 \\  
+0.5 & 8.200 & 1.356 & 0.036 & 0.061 & 0.190 & 99.8 \\  
+\bottomrule 
+\end{tabular} 
+\end{table} 
+\begin{table}[H] 
+\small\sf\centering 
+\caption{Standard deviations (SDs) of relative risk (RR) estimators for $x_1=0.5$ vs $x_1=-0.5$ when $\mbox{logit}(P[Y=1])=\alpha+\beta_1 x_1 + \beta_2 x_2$. Sample size is 1000. $x_1 \sim $$t_4/\sqrt{2}$, $x_2 \sim N(0,1)$. {\it Median prob} refers to the probability that $Y=1$ when both covariates are at their median value. {\it Logit, log, poisson and log-logit} refer to binary regression with logit link (logistic regression) and log link, Poisson regression with log link and binary regression with blended log-logit link, respectively. {\it Prob.reject} is the simulation probability of rejecting the null that the cutover probability is $0.8$ in the blended log-logit model.} 
+\begin{tabular}{llrrrrr} 
+\toprule 
+median & true RR & \multicolumn{4}{c}{bias of estimated RR} & prob.reject \\ 
+prob. & & logit & log & poisson & log-logit  & \\ \midrule 
+0.3 & 1.200 & 0.063 & 0.044 & 0.053 & 0.053 &  2.5 \\  
+0.3 & 1.500 & 0.090 & 0.067 & 0.071 & 0.067 & 39.1 \\  
+0.3 & 3.000 & 0.301 & 0.074 & 0.163 & 0.161 & 96.2 \\  
+0.5 & 1.200 & 0.044 & 0.028 & 0.036 & 0.038 & 29.4 \\  
+0.5 & 1.500 & 0.070 & 0.045 & 0.058 & 0.059 & 77.5 \\  
+0.5 & 3.000 & 0.275 & 0.045 & 0.131 & 0.196 & 99.4 \\  
+\bottomrule 
+\end{tabular} 
+\end{table} 
+\begin{table}[H] 
+\small\sf\centering 
+\caption{Standard deviations (SDs) of relative risk (RR) estimators for $x_1=2$ vs $x_1=1$ when $\mbox{logit}(P[Y=1])=\alpha+\beta_1 x_1 + \beta_2 x_2$. Sample size is 1000. $x_1 \sim $$t_4/\sqrt{2}$, $x_2 \sim N(0,1)$. {\it Median prob} refers to the probability that $Y=1$ when both covariates are at their median value. {\it Logit, log, poisson and log-logit} refer to binary regression with logit link (logistic regression) and log link, Poisson regression with log link and binary regression with blended log-logit link, respectively. {\it Prob.reject} is the simulation probability of rejecting the null that the cutover probability is $0.8$ in the blended log-logit model.} 
+\begin{tabular}{llrrrrr} 
+\toprule 
+median & true RR & \multicolumn{4}{c}{bias of estimated RR} & prob.reject \\ 
+prob. & & logit & log & poisson & log-logit  & \\ \midrule 
+0.3 & 1.173 & 0.045 & 0.044 & 0.053 & 0.053 &  2.5 \\  
+0.3 & 1.332 & 0.035 & 0.067 & 0.071 & 0.067 & 39.1 \\  
+0.3 & 1.346 & 0.029 & 0.074 & 0.163 & 0.080 & 96.2 \\  
+0.5 & 1.098 & 0.015 & 0.045 & 0.131 & 0.018 & 99.4 \\  
+0.5 & 1.143 & 0.020 & 0.028 & 0.036 & 0.038 & 29.4 \\  
+0.5 & 1.206 & 0.011 & 0.045 & 0.058 & 0.025 & 77.5 \\  
+\bottomrule 
+\end{tabular} 
+\end{table} 
+\begin{table}[H] 
+\small\sf\centering 
+\caption{Standard deviations (SDs) of relative risk (RR) estimators for $x_1=-1$ vs $x_1=-2$ when $\mbox{logit}(P[Y=1])=\alpha+\beta_1 x_1 + \beta_2 x_2$. Sample size is 1000. $x_1 \sim $$t_4/\sqrt{2}$, $x_2 \sim N(0,1)$. {\it Median prob} refers to the probability that $Y=1$ when both covariates are at their median value. {\it Logit, log, poisson and log-logit} refer to binary regression with logit link (logistic regression) and log link, Poisson regression with log link and binary regression with blended log-logit link, respectively. {\it Prob.reject} is the simulation probability of rejecting the null that the cutover probability is $0.8$ in the blended log-logit model.} 
+\begin{tabular}{llrrrrr} 
+\toprule 
+median & true RR & \multicolumn{4}{c}{bias of estimated RR} & prob.reject \\ 
+prob. & & logit & log & poisson & log-logit  & \\ \midrule 
+0.3 & 1.224 & 0.078 & 0.044 & 0.053 & 0.053 &  2.5 \\  
+0.3 & 1.634 & 0.132 & 0.067 & 0.071 & 0.067 & 39.1 \\  
+0.3 & 4.583 & 0.652 & 0.074 & 0.163 & 0.161 & 96.2 \\  
+0.5 & 1.260 & 0.070 & 0.028 & 0.036 & 0.038 & 29.4 \\  
+0.5 & 1.865 & 0.169 & 0.045 & 0.058 & 0.059 & 77.5 \\  
+0.5 & 8.200 & 1.498 & 0.045 & 0.131 & 0.196 & 99.4 \\  
+\bottomrule 
+\end{tabular} 
+\end{table} 
+\begin{table}[H] 
+\small\sf\centering 
+\caption{Standard deviations (SDs) of relative risk (RR) estimators for $x_1=0.5$ vs $x_1=-0.5$ when $\mbox{logit}(P[Y=1])=\alpha+\beta_1 x_1 + \beta_2 x_2$. Sample size is 1000. $x_1 \sim $$U(-\sqrt{3},-\sqrt{3})$, $x_2 \sim N(0,1)$. {\it Median prob} refers to the probability that $Y=1$ when both covariates are at their median value. {\it Logit, log, poisson and log-logit} refer to binary regression with logit link (logistic regression) and log link, Poisson regression with log link and binary regression with blended log-logit link, respectively. {\it Prob.reject} is the simulation probability of rejecting the null that the cutover probability is $0.8$ in the blended log-logit model.} 
+\begin{tabular}{llrrrrr} 
+\toprule 
+median & true RR & \multicolumn{4}{c}{bias of estimated RR} & prob.reject \\ 
+prob. & & logit & log & poisson & log-logit  & \\ \midrule 
+0.3 & 1.200 & 0.059 & 0.055 & 0.056 & 0.056 &  0.4 \\  
+0.3 & 1.500 & 0.082 & 0.066 & 0.070 & 0.067 & 10.0 \\  
+0.3 & 3.000 & 0.264 & 0.075 & 0.106 & 0.118 & 98.1 \\  
+0.5 & 1.200 & 0.041 & 0.034 & 0.038 & 0.037 & 22.3 \\  
+0.5 & 1.500 & 0.061 & 0.041 & 0.047 & 0.048 & 76.6 \\  
+0.5 & 3.000 & 0.239 & 0.035 & 0.069 & 0.169 & 99.8 \\  
+\bottomrule 
+\end{tabular} 
+\end{table} 
+\begin{table}[H] 
+\small\sf\centering 
+\caption{Standard deviations (SDs) of relative risk (RR) estimators for $x_1=2$ vs $x_1=1$ when $\mbox{logit}(P[Y=1])=\alpha+\beta_1 x_1 + \beta_2 x_2$. Sample size is 1000. $x_1 \sim $$U(-\sqrt{3},-\sqrt{3})$, $x_2 \sim N(0,1)$. {\it Median prob} refers to the probability that $Y=1$ when both covariates are at their median value. {\it Logit, log, poisson and log-logit} refer to binary regression with logit link (logistic regression) and log link, Poisson regression with log link and binary regression with blended log-logit link, respectively. {\it Prob.reject} is the simulation probability of rejecting the null that the cutover probability is $0.8$ in the blended log-logit model.} 
+\begin{tabular}{llrrrrr} 
+\toprule 
+median & true RR & \multicolumn{4}{c}{bias of estimated RR} & prob.reject \\ 
+prob. & & logit & log & poisson & log-logit  & \\ \midrule 
+0.3 & 1.173 & 0.043 & 0.055 & 0.056 & 0.056 &  0.4 \\  
+0.3 & 1.332 & 0.033 & 0.066 & 0.070 & 0.067 & 10.0 \\  
+0.3 & 1.346 & 0.028 & 0.075 & 0.106 & 0.060 & 98.1 \\  
+0.5 & 1.098 & 0.014 & 0.035 & 0.069 & 0.023 & 99.8 \\  
+0.5 & 1.143 & 0.020 & 0.034 & 0.038 & 0.037 & 22.3 \\  
+0.5 & 1.206 & 0.012 & 0.041 & 0.047 & 0.025 & 76.6 \\  
+\bottomrule 
+\end{tabular} 
+\end{table} 
+\begin{table}[H] 
+\small\sf\centering 
+\caption{Standard deviations (SDs) of relative risk (RR) estimators for $x_1=-1$ vs $x_1=-2$ when $\mbox{logit}(P[Y=1])=\alpha+\beta_1 x_1 + \beta_2 x_2$. Sample size is 1000. $x_1 \sim $$U(-\sqrt{3},-\sqrt{3})$, $x_2 \sim N(0,1)$. {\it Median prob} refers to the probability that $Y=1$ when both covariates are at their median value. {\it Logit, log, poisson and log-logit} refer to binary regression with logit link (logistic regression) and log link, Poisson regression with log link and binary regression with blended log-logit link, respectively. {\it Prob.reject} is the simulation probability of rejecting the null that the cutover probability is $0.8$ in the blended log-logit model.} 
+\begin{tabular}{llrrrrr} 
+\toprule 
+median & true RR & \multicolumn{4}{c}{bias of estimated RR} & prob.reject \\ 
+prob. & & logit & log & poisson & log-logit  & \\ \midrule 
+0.3 & 1.224 & 0.073 & 0.055 & 0.056 & 0.056 &  0.4 \\  
+0.3 & 1.634 & 0.119 & 0.066 & 0.070 & 0.067 & 10.0 \\  
+0.3 & 4.583 & 0.525 & 0.075 & 0.106 & 0.118 & 98.1 \\  
+0.5 & 1.260 & 0.065 & 0.034 & 0.038 & 0.037 & 22.3 \\  
+0.5 & 1.865 & 0.141 & 0.041 & 0.047 & 0.048 & 76.6 \\  
+0.5 & 8.200 & 1.185 & 0.035 & 0.069 & 0.169 & 99.8 \\  
+\bottomrule 
+\end{tabular} 
+\end{table} 
+\end{document}
